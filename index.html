@@ -1,395 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DELOS Concept Note | Spatial Strategy Institute</title>
-<style>
-  :root {
-    --blue: #003a70;
-    --blue-light: #1a5a9e;
-    --blue-faint: #e6f0fa;
-    --grey: #7a7a7a;
-    --grey-dark: #555555;
-    --grey-light: #f4f4f4;
-    --accent: #b89a5e;
-    --accent-light: #d4bc8a;
-    --text: #444444;
-    --text-light: #666666;
-    --bg: #fafafa;
-    --white: #ffffff;
-    --max-width: 900px;
-    --radius: 4px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELOS | Spatial Strategy Institute - Concept Note</title>
+    <!-- Premium Fonts Setup -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1A2B4C; /* Delos Deep Navy */
+            --accent: #C82333;  /* Delos Crimson */
+            --text-dark: #2D3748;
+            --text-light: #718096;
+            --bg-light: #F7FAFC;
+            --max-width: 800px;
+        }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  body {
-    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    color: var(--text);
-    background: var(--bg);
-  }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.75;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
 
-  /* Header / Hero */
-  header {
-    background: var(--white);
-    color: var(--blue);
-    padding: 3rem 1.5rem 2.5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #e8e8e8;
-  }
+        /* Top Header Styling */
+        header {
+            text-align: center;
+            padding: 4rem 2rem 3rem 2rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid #E2E8F0;
+        }
 
-  .wave-divider {
-    display: block;
-    margin: 1.2rem auto 0;
-    width: 180px;
-    height: 40px;
-    opacity: 0.7;
-  }
+        .logo-container {
+            margin-bottom: 1.5rem;
+        }
 
-  .header-content {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-  }
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+        }
 
-  .logo-img {
-    max-width: 220px;
-    height: auto;
-    margin-bottom: 1.5rem;
-  }
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary);
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
 
-  h1 {
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    font-weight: 300;
-    letter-spacing: 2px;
-    color: var(--grey);
-    margin-bottom: 0.6rem;
-    text-transform: uppercase;
-  }
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15rem;
+            color: var(--text-light);
+            font-weight: 300;
+            max-width: 650px;
+            margin: 0 auto 1.5rem auto;
+            line-height: 1.5;
+        }
 
-  h1 strong {
-    font-weight: 400;
-    color: var(--grey-dark);
-  }
+        .doc-tag {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent);
+            font-weight: 600;
+            border: 1px solid var(--accent);
+            padding: 0.4rem 1.2rem;
+            border-radius: 4px;
+        }
 
-  .tagline {
-    font-size: 1rem;
-    color: var(--grey);
-    max-width: 600px;
-    margin: 0 auto;
-    font-weight: 300;
-    font-style: italic;
-  }
+        /* Main Content Container */
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
 
-  .doc-label {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.4rem 1.5rem;
-    background: var(--blue);
-    color: var(--white);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    border-radius: var(--radius);
-  }
+        section {
+            margin-bottom: 3.5rem;
+        }
 
-  /* Main content */
-  main {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem 4rem;
-  }
+        h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
 
-  section {
-    background: var(--white);
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    border-radius: var(--radius);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
-    border: 1px solid #eee;
-  }
+        p {
+            font-size: 1.05rem;
+            font-weight: 400;
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
 
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--blue);
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--blue);
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--blue-light);
-    margin: 1.5rem 0 0.6rem;
-  }
+        li {
+            font-size: 1.05rem;
+            margin-bottom: 0.75rem;
+        }
 
-  p {
-    margin-bottom: 1rem;
-    color: var(--text-light);
-  }
+        strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
 
-  ul {
-    margin: 0.8rem 0 1rem 1.2rem;
-    color: var(--text-light);
-  }
+        /* Pillar Sub-sections styling */
+        .pillar-card {
+            background-color: var(--bg-light);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
 
-  ul li {
-    margin-bottom: 0.5rem;
-  }
+        .pillar-title {
+            font-family: 'Cinzel', serif;
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
 
-  .highlight-box {
-    background: var(--blue-faint);
-    border-left: 3px solid var(--blue);
-    padding: 1.2rem 1.5rem;
-    margin: 1.2rem 0;
-  }
+        /* Action-oriented list styling */
+        .differentiator-list li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.25rem;
+        }
 
-  .highlight-box p {
-    color: var(--blue);
-    margin: 0;
-    font-weight: 500;
-  }
+        .differentiator-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
 
-  .pillars {
-    display: grid;
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: var(--bg-light);
+            border-top: 1px solid #E2E8F0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
 
-  .pillar {
-    padding: 1.5rem;
-    background: var(--grey-light);
-    border-top: 3px solid var(--blue);
-    border-radius: 0 0 var(--radius) var(--radius);
-  }
-
-  .pillar h3 {
-    margin-top: 0;
-    color: var(--blue);
-  }
-
-  .pillar-label {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--grey);
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-  }
-
-  .differentiators {
-    counter-reset: diff;
-    list-style: none;
-    margin-left: 0;
-  }
-
-  .differentiators li {
-    position: relative;
-    padding-left: 3rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .differentiators li::before {
-    counter-increment: diff;
-    content: counter(diff);
-    position: absolute;
-    left: 0; top: 0;
-    width: 2rem; height: 2rem;
-    background: var(--blue);
-    color: var(--white);
-    font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 50%;
-    font-size: 0.85rem;
-  }
-
-  .profile-card {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .profile-avatar {
-    width: 80px; height: 80px;
-    background: var(--blue);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--white);
-    font-size: 1.6rem;
-    font-weight: 300;
-    flex-shrink: 0;
-  }
-
-  .profile-info h3 {
-    margin-top: 0;
-    color: var(--blue);
-  }
-
-  .project-meta {
-    display: grid;
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-
-  .meta-row {
-    display: flex;
-    gap: 0.8rem;
-    align-items: baseline;
-    flex-wrap: wrap;
-  }
-
-  .meta-label {
-    font-weight: 600;
-    color: var(--blue);
-    min-width: 140px;
-    font-size: 0.9rem;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    background: var(--white);
-    color: var(--grey);
-    font-size: 0.85rem;
-    border-top: 1px solid #e8e8e8;
-  }
-
-  footer a {
-    color: var(--blue);
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
-
-  @media (max-width: 600px) {
-    section { padding: 1.5rem; }
-    .profile-card { flex-direction: column; align-items: center; text-align: center; }
-    .meta-label { min-width: auto; }
-    .logo-img { max-width: 160px; }
-  }
-</style>
+        /* Responsive modifications */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.75rem; }
+            .subtitle { font-size: 1rem; }
+            main { padding: 2rem 1.25rem; }
+            p, li { font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <div class="header-content">
-    <img src="https://cdn.oreateai.com/aiimage/upload/c756ed733663fdf1d83c128a/0f431c49bf9aa0183be014ebf0b1f66f.png" alt="DELOS Spatial Strategy Institute" class="logo-img">
-    <h1>Concept Note <strong>&amp; Leadership Profile</strong></h1>
-    <svg class="wave-divider" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg" fill="none">
-      <path d="M0 20 Q 25 5, 50 20 T 100 20 T 150 20 T 200 20" stroke="#003a70" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <path d="M0 28 Q 25 13, 50 28 T 100 28 T 150 28 T 200 28" stroke="#003a70" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
-      <path d="M0 36 Q 25 21, 50 36 T 100 36 T 150 36 T 200 36" stroke="#003a70" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
-    </svg>
-    <p class="tagline">Bridging Geospatial Intelligence, Policy Innovation, and Economic Dynamism in the Mediterranean</p>
-    <span class="doc-label">Concept Note</span>
-  </div>
-</header>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="DELOS Spatial Strategy Institute Logo" class="logo-img">
+        </div>
+        <h1>DELOS</h1>
+        <div class="subtitle">Spatial Strategy Institute<br>Bridging Geospatial Intelligence, Policy Innovation, and Economic Dynamism in the Mediterranean</div>
+        <div class="doc-tag">Concept Note & Leadership Profile</div>
+    </header>
 
-<main>
+    <main>
+        <section>
+            <h2>1. Executive Summary</h2>
+            <p><strong>DELOS | Spatial Strategy Institute</strong> is an independent, strategic think-and-do tank operating as a "Boundary Organization". DELOS bridges cutting-edge academic research (GeoAI) with applied institutional policy and market strategy to optimize spatial allocation and resolve complex land, marine, and institutional resource challenges in the Mediterranean.</p>
+            <p>Moving away from bureaucratic, top-down compliance frameworks, DELOS utilizes data-driven Location Intelligence to unlock sustainable investments, secure property rights, and foster stakeholder consensus for resilient communities.</p>
+            <ul>
+                <li><strong>Vision:</strong> To become a premier engine for Spatial Intelligence and Policy Optimization in the Mediterranean.</li>
+                <li><strong>Mission:</strong> Translating advanced geospatial science into actionable policy blueprints for governments, markets, and society.</li>
+            </ul>
+        </section>
 
-  <section id="executive-summary">
-    <h2>Executive Summary</h2>
-    <p><strong>DELOS | Spatial Strategy Institute</strong> is an independent, strategic think-and-do tank operating as a "Boundary Organization." DELOS bridges cutting-edge academic research (GeoAI) with applied institutional policy and market strategy to optimize spatial allocation and resolve complex land, marine, and institutional resource challenges in the Mediterranean.</p>
-    <p>Moving away from bureaucratic, top-down compliance frameworks, DELOS utilizes data-driven Location Intelligence to unlock sustainable investments, secure property rights, and foster stakeholder consensus for resilient communities.</p>
-    <div class="highlight-box">
-      <p><strong>Vision:</strong> To become the premier engine for Spatial Intelligence and Policy Optimization in the Mediterranean.</p>
-    </div>
-    <div class="highlight-box">
-      <p><strong>Mission:</strong> Translating advanced geospatial science into actionable policy blueprints for governments, markets, and society.</p>
-    </div>
-  </section>
+        <section>
+            <h2>2. The Strategic Pillars & Impact Areas</h2>
+            <p>Unlike traditional startups, DELOS is built upon a pre-existing multi-million research and institutional track record led by its founder, directly scaling and applying a decade of elite geospatial and governance initiatives into an immediate policy framework.</p>
+            
+            <div class="pillar-card">
+                <div class="pillar-title">Pillar A: GeoAI & Spatial Decision Support (Tech & Innovation)</div>
+                <p><strong>Focus:</strong> Applying Artificial Intelligence to geospatial and spatiotemporal data (GeoAI) to optimize infrastructure, predict climate risks, and build smart, resilient cities. This pillar directly leverages and scales the core visualization capabilities and semantic mapping methodologies developed under the CYBERCARTO and GEO-ACADEMY initiatives.</p>
+            </div>
 
-  <section id="pillars">
-    <h2>Strategic Pillars &amp; Impact Areas</h2>
-    <p>Unlike traditional startups, DELOS is built upon a pre-existing multi-million research and institutional track record led by its founder, directly scaling and applying a decade of elite geospatial and governance initiatives into an immediate policy framework.</p>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-label">Pillar A</div>
-        <h3>GeoAI &amp; Spatial Decision Support</h3>
-        <p>Applying Artificial Intelligence to geospatial and spatiotemporal data (GeoAI) to optimize infrastructure, predict climate risks, and build smart, resilient cities. This pillar directly leverages and scales the core visualization capabilities and semantic mapping methodologies developed under the <strong>CYBERCARTO</strong> and <strong>GEO-ACADEMY</strong> initiatives.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-label">Pillar B</div>
-        <h3>Blue Economy &amp; Marine Spatial Planning</h3>
-        <p>Utilizing Marine Spatial Planning (MSP) to balance green energy deployment—such as offshore wind farms—with tourism and marine conservation, ensuring harmonious co-existence and social acceptance among investors and local stakeholders.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-label">Pillar C</div>
-        <h3>Land Governance &amp; Property Rights</h3>
-        <p>Advancing clear cadastre data and robust property rights as the fundamental baseline for cutting red tape, reducing transaction costs, and attracting foreign direct investment. This framework exports the technical and standardization lessons derived from the execution of the modern Hellenic Cadastre to the wider region.</p>
-      </div>
-    </div>
-  </section>
+            <div class="pillar-card">
+                <div class="pillar-title">Pillar B: Blue Economy & Marine Spatial Planning (Policy & Society)</div>
+                <p><strong>Focus:</strong> Utilizing Marine Spatial Planning (MSP) to balance green energy deployment—such as offshore wind farms—with tourism and marine conservation, ensuring harmonious co-existence and social acceptance among investors and local stakeholders.</p>
+            </div>
 
-  <section id="differentiator">
-    <h2>The DELOS Differentiator</h2>
-    <p>DELOS breaks traditional organizational silos through a unique, market-friendly approach:</p>
-    <ol class="differentiators">
-      <li><strong>Action-Oriented Blueprints vs. Academic Papers:</strong> DELOS delivers data-driven visual dashboards and direct strategic blueprints designed for immediate deployment by decision-makers.</li>
-      <li><strong>The "Translator" Model:</strong> DELOS acts as the ultimate boundary translator, connecting the technical capabilities of Academia with the practical needs of Policy and Market leaders.</li>
-      <li><strong>Market-Friendly Incentives:</strong> We champion solutions rooted in innovation, economic freedom, and legal certainty, rather than command-and-control restrictions.</li>
-    </ol>
-  </section>
+            <div class="pillar-card">
+                <div class="pillar-title">Pillar C: Land Governance & Property Rights (Institutions & Market)</div>
+                <p><strong>Focus:</strong> Advancing clear cadastre data and robust property rights as the fundamental baseline for cutting red tape, reducing transaction costs, and attracting foreign direct investment. This framework exports the technical and standardization lessons derived from the execution of the modern Hellenic Cadastre to the wider region.</p>
+            </div>
+        </section>
 
-  <section id="leadership">
-    <h2>Leadership Profile</h2>
-    <div class="profile-card">
-      <div class="profile-avatar">MK</div>
-      <div class="profile-info">
-        <h3>Professor Emeritus Marinos Kavouras</h3>
-        <p style="color: var(--grey); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.8rem;">Founder &amp; Strategic Director</p>
-        <p>Professor Marinos Kavouras is a globally recognized authority in Geospatial Science, Spatial Policy, and Institutional Governance. As Professor Emeritus, former Dean, and Vice-Rector at the National Technical University of Athens (NTUA), and the former Vice-President of the Hellenic Cadastre, he brings a rare and powerful combination of elite academic excellence and high-level administrative execution.</p>
-        <p>As a past co-Chair of AGILE (Association of Geographic Information Laboratories in Europe), he has contributed to shaping geospatial data strategies across Europe for over two decades.</p>
-        <p>His mission is to leverage this comprehensive expertise to help public entities and private enterprises navigate complex data landscapes, optimize decision-making, and achieve sustainable growth through elite strategic counsel.</p>
-      </div>
-    </div>
-    <h3>Core Competencies &amp; Track Record</h3>
-    <ul>
-      <li><strong>Institutional Capacity:</strong> Executive tenure at the Hellenic Cadastre ensures a deep, practical understanding of state machinery and the technical management of large-scale land property formalization projects.</li>
-      <li><strong>Technological Foresight:</strong> Pioneering research in Spatiotemporal Analysis, Ontologies, Cybercartography, and GeoAI provides the scientific credibility required to deploy next-generation tools for complex policy problems.</li>
-      <li><strong>Global Ecosystem:</strong> Successfully led and managed multi-million international research initiatives, possessing the network to assemble top-tier scientific talent and execute complex deliverables with absolute precision.</li>
-    </ul>
-  </section>
+        <section>
+            <h2>3. The Delos Differentiator</h2>
+            <p>DELOS breaks traditional organizational silos through a unique, market-friendly approach:</p>
+            <ul class="differentiator-list">
+                <li><strong>Action-Oriented Blueprints vs. Academic Papers:</strong> DELOS delivers data-driven visual dashboards and direct strategic blueprints designed for immediate deployment by decision-makers.</li>
+                <li><strong>The "Translator" Model:</strong> DELOS acts as the ultimate boundary translator, connecting the technical capabilities of Academia with the practical needs of Policy and Market leaders.</li>
+                <li><strong>Market-Friendly Incentives:</strong> We champion solutions rooted in innovation, economic freedom, and legal certainty, rather than command-and-control restrictions.</li>
+            </ul>
+        </section>
 
-  <section id="seed-project">
-    <h2>Proof of Concept: Seed Project</h2>
-    <div class="project-meta">
-      <div class="meta-row">
-        <span class="meta-label">Project Title:</span>
-        <span>Spatial Intelligence for Coastal Resilience &amp; Renewable Energy in the Aegean Sea</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Objective:</span>
-        <span>Developing an open-access GeoAI model to map optimum locations for offshore wind energy in the Cyclades islands, dynamically balancing environmental data, tourism infrastructure, and community feedback to demonstrate the DELOS methodology in practice.</span>
-      </div>
-      <div class="meta-row">
-        <span class="meta-label">Funding Requirement:</span>
-        <span><strong>$45,000 – $60,000</strong> (Seed / Project Grant covering junior researchers, data acquisition, and platform deployment)</span>
-      </div>
-    </div>
-  </section>
+        <section>
+            <h2>4. Leadership Profile</h2>
+            <p style="font-style: italic; color: var(--text-light); margin-bottom: 1rem;">Professor Emeritus Marinos Kavouras | Founder & Strategic Director</p>
+            <p style="font-weight: 500; color: var(--primary);">Advisory, Research Leadership, and Capacity Building: Bridging Science, Policy, and Real-World Applications.</p>
+            <p>Professor Marinos Kavouras is a globally recognized authority in Geospatial Science, Spatial Policy, and Institutional Governance. As Professor Emeritus, former Dean, and Vice-Rector at the National Technical University of Athens (NTUA), and the former Vice-President of the Hellenic Cadastre, he brings a rare and powerful combination of elite academic excellence and high-level administrative execution.</p>
+            <p>As a past co-Chair of AGILE (Association of Geographic Information Laboratories in Europe), he has contributed to shaping geospatial data strategies across Europe for over two decades.</p>
+            <p>His mission is to leverage this comprehensive expertise to help public entities and private enterprises navigate complex data landscapes, optimize decision-making, and achieve sustainable growth through elite strategic counsel. By translating spatial intelligence into public policy, DELOS drives structural innovation and long-term societal resilience.</p>
+            
+            <p style="font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Core Competencies & Track Record:</p>
+            <ul>
+                <li><strong>Institutional Capacity:</strong> His executive tenure at the Hellenic Cadastre ensures a deep, practical understanding of state machinery and the technical management of large-scale land property formalization projects.</li>
+                <li><strong>Technological Foresight:</strong> His pioneering research in Spatiotemporal Analysis, Ontologies, Cybercartography, and GeoAI provides the scientific credibility required to deploy next-generation tools for complex policy problems.</li>
+                <li><strong>Global Ecosystem:</strong> Having successfully led and managed multi-million international research initiatives, Prof. Kavouras possesses the network to assemble top-tier scientific talent and execute complex deliverables with absolute precision.</li>
+            </ul>
+        </section>
 
-</main>
+        <section>
+            <h2>5. Institutional Seed Funding Request</h2>
+            <p>To operationalize its launch and scale its spatial data frameworks, DELOS is seeking an initial Institutional Seed/Core Grant of <strong>$45,000 – $60,000</strong> for its first 12-month operational cycle.</p>
+            <p>This foundational funding will be utilized for:</p>
+            <ul>
+                <li><strong>Core Research Capacity:</strong> Retaining junior post-doctoral researchers and spatial analysts to support the strategic pillars.</li>
+                <li><strong>Data & Infrastructure Baseline:</strong> Acquiring initial remote sensing data registries and cloud computing server capacities for GeoAI modeling.</li>
+                <li><strong>Operational Setup:</strong> Establishing the Institute’s regulatory alignment, international advisory board recruitment, and initial policy brief dissemination.</li>
+            </ul>
+            <p style="font-style: italic; color: var(--text-light); font-size: 0.95rem; margin-top: 1.5rem;">Detailed line-item project proposals, specific multi-criteria scenario simulations, and targeted budgets for individual pilot initiatives (such as Marine Spatial Planning or Carrying Capacity modeling) are available independently upon request.</p>
+        </section>
+    </main>
 
-<footer>
-  <p>© 2026 DELOS Spatial Strategy Institute | Athens, Greece</p>
-  <p>Contact: <a href="mailto:info@delos-spatial.org">info@delos-spatial.org</a></p>
-  <p style="margin-top: 0.5rem;"><a href="https://sites.google.com/view/delos-spatial/" target="_blank">Visit our website</a></p>
-</footer>
+    <footer>
+        <p>&copy; 2026 DELOS Spatial Strategy Institute | Athens, Greece | Contact: info@delos-spatial.org</p>
+    </footer>
 
 </body>
 </html>
